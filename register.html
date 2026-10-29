@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Договор о присутствии</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="contract-body">
+  <main class="contract-wrap">
+    <div class="contract-topline"><a href="index.html">← вернуться на портал</a><span>ФОРМА № 0-13 / ЭКЗЕМПЛЯР НЕ ВОЗВРАЩАТЬ</span></div>
+    <section class="contract-card">
+      <div class="contract-stamp">НЕ<br>ЧИТАТЬ<br>ВСЛУХ</div>
+      <p class="contract-kicker">ОТДЕЛ РЕГИСТРАЦИИ И ПЕРЕХОДА ПРАВ</p>
+      <h1>Договор о присутствии</h1>
+      <p class="contract-warning">Заполняйте поля в точности так, как они запрашиваются. Не указывайте имя, которым вас называют другие. Не закрывайте эту страницу до завершения процедуры.</p>
+      <div class="contract-rule"><span>✦</span> СВЕДЕНИЯ О ЗАЯВИТЕЛЕ <span>✦</span></div>
+      <form class="contract-form" action="#application-pending" method="get">
+        <label for="real-name">НАСТОЯЩЕЕ ИМЯ <em>обязательно</em></label>
+        <input id="real-name" name="real-name" type="text" placeholder="Имя, данное до первого воспоминания" required autocomplete="off">
+        <label for="username">Логин</label>
+        <input id="username" name="username" type="text" placeholder="Имя для остальных пользователей" required minlength="3" autocomplete="username">
+        <div class="contract-grid">
+          <div><label for="password">Пароль</label><input id="password" name="password" type="password" required minlength="8" autocomplete="new-password" placeholder="Не менее 8 символов"></div>
+          <div><label for="password-repeat">Повторение пароля</label><input id="password-repeat" name="password-repeat" type="password" required minlength="8" autocomplete="new-password" placeholder="Повторите в точности"></div>
+        </div>
+        <label for="true-password">ИСТИННЫЙ ПАРОЛЬ <span class="field-note">(если первый перестанет работать)</span></label>
+        <input id="true-password" name="true-password" type="text" required placeholder="Слово, которое вы никогда не произносите" autocomplete="off">
+        <label for="victim">ЖЕРТВА</label>
+        <input id="victim" name="victim" type="text" required placeholder="Имя / описание / «не назначена»" autocomplete="off">
+        <p class="contract-smallprint">Подписывая договор, вы подтверждаете, что прочитали условия, даже если текст ниже отсутствует. Поля, оставленные пустыми, могут быть заполнены от вашего имени.</p>
+        <div class="contract-check"><input id="consent" name="consent" type="checkbox" required><label for="consent">Я согласен(-на) с условиями, включая те, которые мне не показали.</label></div>
+        <button class="contract-submit" type="submit">ПОДПИСАТЬ ДОГОВОР</button>
+      </form>
+      <div class="pending-message" id="application-pending" role="status">
+        <div class="pending-seal">ЗАЯВКА<br>ПРИНЯТА</div>
+        <h2>Ваша заявка рассматривается.</h2>
+        <p>Не отправляйте повторную заявку. Не пытайтесь вспомнить, что именно вы указали в поле «ЖЕРТВА».</p>
+        <p class="pending-code">Регистрационный номер: <strong>НЕ ПРИСВОЕН</strong></p>
+        <a href="index.html">Вернуться на главную страницу</a>
+      </div>
+      <div class="contract-bottom"><span>Экземпляр остаётся у Портала.</span><span>Экземпляр остаётся у Портала.</span></div>
+    </section>
+    <p class="contract-footer">Если вы не подавали заявку, пожалуйста, не обращайтесь в администрацию.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,653 @@
+/* Городской портал — оформление в духе сайтов 2005–2009 годов */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 18px 0 30px;
+  background: #c8cdd2;
+  color: #252b31;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+a {
+  color: #234d79;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #4b5279;
+}
+
+a:hover {
+  color: #9a3434;
+  text-decoration: none;
+}
+
+.site {
+  width: 980px;
+  margin: 0 auto;
+  padding: 7px;
+  background: #e6e9ec;
+  border: 1px solid #7f8993;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+}
+
+.site-header {
+  margin-bottom: 9px;
+}
+
+.topline {
+  min-height: 22px;
+  padding: 3px 7px;
+  display: flex;
+  justify-content: space-between;
+  background: #cbd4de;
+  border: 1px solid #a6b2bf;
+  color: #596775;
+  font-size: 10px;
+}
+
+.topline a {
+  color: #3d5875;
+  text-decoration: none;
+}
+
+.topline a:hover {
+  text-decoration: underline;
+}
+
+.topline span {
+  padding: 0 4px;
+  color: #8b969f;
+}
+
+.branding {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background: #edf0f2;
+  border-right: 1px solid #b9c1c8;
+  border-bottom: 1px solid #b9c1c8;
+  border-left: 1px solid #b9c1c8;
+}
+
+.logo-mark {
+  width: 49px;
+  height: 49px;
+  margin-right: 11px;
+  border: 2px solid #526c86;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e9edf1 0%, #a8b8c7 48%, #dce3e9 100%);
+  color: #385570;
+  font-family: Georgia, serif;
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 45px;
+  text-align: center;
+  text-shadow: 1px 1px #fff;
+}
+
+.brand-copy h1 {
+  margin: 0;
+  color: #263f58;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 1.15;
+  /* Добавим для стабильности анимации */
+  font-family: 'Courier New', Courier, monospace; 
+}
+
+.brand-copy p {
+  margin: 3px 0 0;
+  color: #667481;
+  font-size: 11px;
+  letter-spacing: 0.2px;
+}
+
+.header-note {
+  margin-left: auto;
+  padding: 7px 9px;
+  border-left: 1px dotted #aab4bd;
+  color: #5f6b76;
+  text-align: right;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.header-note strong {
+  color: #3b536a;
+  font-size: 11px;
+}
+
+.header-banner {
+  height: 34px;
+  margin-top: 5px;
+  padding: 8px 12px;
+  overflow: hidden;
+  background: #aebdcb;
+  border: 1px solid #899bab;
+  color: #314c66;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  text-align: center;
+  text-shadow: 1px 1px #dce4eb;
+}
+
+.main-nav {
+  display: flex;
+  margin-top: 5px;
+  border: 1px solid #6e7e8d;
+  background: #b7c4d0;
+}
+
+.main-nav a {
+  display: block;
+  padding: 7px 13px 6px;
+  border-right: 1px solid #8e9ca9;
+  color: #263f58;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.main-nav a:hover,
+.main-nav a.current {
+  background: #536d85;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.breadcrumb {
+  padding: 5px 3px 1px;
+  color: #7a858e;
+  font-size: 10px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 292px 1fr 176px;
+  gap: 8px;
+  align-items: start;
+}
+
+.column {
+  min-width: 0;
+}
+
+.panel {
+  margin-bottom: 9px;
+  border: 1px solid #9aa5af;
+  background: #f3f4f4;
+}
+
+.panel-heading {
+  min-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 4px 7px;
+  background: linear-gradient(to bottom, #d1d9e0 0%, #b8c4cf 100%);
+  border-bottom: 1px solid #9aa5af;
+}
+
+.panel-heading h2 {
+  margin: 0;
+  color: #2d465f;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.panel-heading > a {
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.panel-body {
+  padding: 7px;
+}
+
+/* Разделительная линия между объявлениями */
+.panel-body .full-entry {
+    border-bottom: 1px solid #ccc; /* Сплошная серая линия */
+    padding-bottom: 15px;          /* Отступ от текста до линии */
+    margin-bottom: 15px;           /* Отступ от линии до следующего объявления */
+}
+
+/* Убираем линию у самого последнего объявления в списке, чтобы снизу было красиво */
+.panel-body .full-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.panel-footer {
+  padding: 5px 7px;
+  background: #e6e9eb;
+  border-top: 1px solid #d0d5d9;
+  color: #7b858d;
+  font-size: 10px;
+}
+
+.news-item {
+  padding: 3px 3px 7px;
+  margin-bottom: 5px;
+  border-bottom: 1px dotted #b6bdc3;
+}
+
+.news-item:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.date {
+  display: block;
+  margin-bottom: 2px;
+  color: #7d858c;
+  font-size: 9px;
+}
+
+.news-item h3,
+.classified-copy h3 {
+  margin: 0 0 3px;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.news-item p,
+.classified-copy p {
+  margin: 0;
+  color: #4d555c;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.topic-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 6px 1px;
+  border-bottom: 1px dotted #b8c0c6;
+}
+
+.topic-row:last-child {
+  border-bottom: 0;
+}
+
+.topic-icon {
+  padding-top: 1px;
+  color: #6c8ba7;
+  font-size: 9px;
+}
+
+.topic-icon.hot {
+  color: #a34b4b;
+}
+
+.topic-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.topic-main > a {
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.topic-main small,
+.classified-copy small,
+.qa-item small {
+  display: block;
+  margin-top: 3px;
+  color: #7b838a;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.replies {
+  min-width: 43px;
+  color: #777f86;
+  font-size: 9px;
+  text-align: right;
+}
+
+.classified {
+  display: flex;
+  gap: 8px;
+  padding: 6px 1px 8px;
+  margin-bottom: 5px;
+  border-bottom: 1px dotted #b8c0c6;
+}
+
+.classified:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.classified-thumb {
+  flex: 0 0 72px;
+  width: 72px;
+  height: 61px;
+}
+
+.placeholder-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #aab4bd;
+  background: linear-gradient(135deg, #e5e8eb, #cbd3da);
+  color: #7b8995;
+  font-size: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px #fff;
+}
+
+.classified-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.price {
+  display: block;
+  margin-top: 4px;
+  color: #6b4932;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.qa-item {
+  display: flex;
+  gap: 7px;
+  padding: 6px 1px;
+  border-bottom: 1px dotted #b8c0c6;
+}
+
+.qa-item:last-child {
+  border-bottom: 0;
+}
+
+.qa-mark {
+  display: block;
+  flex: 0 0 17px;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #9aa9b6;
+  background: #dce3e8;
+  color: #3c5b76;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
+  text-align: center;
+}
+
+.qa-item > div {
+  flex: 1;
+}
+
+.archive-box p {
+  margin: 0 0 5px;
+  color: #59636b;
+}
+
+.archive-box ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.archive-box li {
+  padding: 2px 0;
+}
+
+.ad-box {
+  margin-bottom: 9px;
+  padding: 5px;
+  border: 1px solid #9aa5af;
+  background: #f3f4f4;
+  text-align: center;
+}
+
+.ad-label {
+  padding: 1px 0 5px;
+  color: #596775;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #7e8c98;
+  background: linear-gradient(135deg, #dce3e9, #aab9c7);
+  color: #2c4863;
+  text-decoration: none;
+  text-shadow: 1px 1px #edf1f4;
+}
+
+.banner:hover {
+  border-color: #425f7a;
+  background: linear-gradient(135deg, #e6ebef, #b9c8d5);
+  color: #8d3333;
+}
+
+.banner-main {
+  min-height: 105px;
+  padding: 8px;
+}
+
+.banner-main img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-main strong {
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.banner-main span {
+  margin-top: 5px;
+  font-size: 10px;
+}
+
+.ad-caption {
+  margin: 5px 0 1px;
+  color: #737d85;
+  font-size: 9px;
+}
+
+.mini-panel .panel-heading {
+  min-height: 23px;
+}
+
+.mini-panel .panel-heading h2 {
+  font-size: 11px;
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px 7px;
+}
+
+.link-list a {
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.small-ad {
+  padding: 5px;
+}
+
+.banner-small {
+  min-height: 42px;
+  margin-bottom: 5px;
+  padding: 4px;
+}
+
+.banner-small strong {
+  font-size: 11px;
+}
+
+.banner-small span {
+  font-size: 9px;
+}
+
+.banner-alt {
+  margin-bottom: 0;
+  background: linear-gradient(135deg, #dce0e3, #c3cbd1);
+}
+
+.statistics {
+  padding: 7px;
+  font-size: 9px;
+}
+
+.statistics div {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 3px 0;
+  border-bottom: 1px dotted #c0c6cb;
+}
+
+.statistics div span {
+  color: #626c74;
+}
+
+.statistics div strong {
+  color: #354e65;
+  font-weight: bold;
+}
+
+.statistics p {
+  margin: 7px 0 0;
+  color: #626c74;
+  line-height: 1.6;
+}
+
+.site-footer {
+  margin-top: 2px;
+  padding: 10px 7px 7px;
+  border-top: 2px solid #a6b2bd;
+  color: #7b858d;
+  font-size: 9px;
+  text-align: center;
+}
+
+.footer-links {
+  margin-bottom: 5px;
+}
+
+.footer-links a {
+  color: #536b80;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.site-footer p {
+  margin: 3px 0;
+}
+
+.footer-note {
+  color: #8c949b;
+}
+
+.counter {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 2px 5px;
+  border: 1px solid #b8c1c9;
+  background: #dce1e5;
+  color: #5b6873;
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* Узкие экраны намеренно сохраняют фиксированную ширину сайта. */
+@media (max-width: 995px) {
+  body {
+    padding-top: 0;
+  }
+
+  .site {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+/* Потусторонняя форма регистрации / договор */
+.contract-body {
+  min-height: 100vh;
+  padding: 26px 12px 40px;
+  background: #101014;
+  color: #e7e0d4;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  background-image: radial-gradient(ellipse at top, #34303a 0%, #17161c 42%, #08080b 100%);
+}
+.contract-wrap { width: 620px; max-width: 100%; margin: 0 auto; }
+.contract-topline { display:flex; justify-content:space-between; gap:12px; margin-bottom:10px; color:#aaa0ad; font:10px Tahoma, sans-serif; letter-spacing:.8px; }
+.contract-topline a { color:#c7b6c8; }
+.contract-card { position:relative; padding:32px 42px 20px; border:1px solid #8e7b91; outline:1px solid #4d3d51; outline-offset:5px; background:linear-gradient(135deg,rgba(44,39,48,.98),rgba(17,17,22,.98) 48%,rgba(39,28,37,.98)); box-shadow:0 0 28px #000, inset 0 0 35px rgba(163,118,161,.09); }
+.contract-card:before,.contract-card:after { content:"✦  ·  ✧  ·  ✦  ·  ✧  ·  ✦"; display:block; color:#a38aa6; text-align:center; letter-spacing:7px; font-size:11px; }
+.contract-card:before { margin-bottom:22px; }
+.contract-card:after { margin-top:18px; }
+.contract-stamp { position:absolute; right:25px; top:25px; width:67px; height:67px; display:flex; align-items:center; justify-content:center; border:2px double #a84949; border-radius:50%; color:#d36a68; text-align:center; font:bold 10px Tahoma,sans-serif; line-height:1.35; transform:rotate(13deg); opacity:.82; }
+.contract-kicker { margin:0 80px 8px 0; color:#b39ab6; font:10px Tahoma,sans-serif; letter-spacing:1.5px; }
+.contract-card h1 { margin:0 70px 13px 0; color:#f0e6d7; font-size:30px; font-weight:normal; line-height:1.1; text-shadow:0 0 10px rgba(192,142,189,.35); }
+.contract-warning { margin:0 0 20px; padding:10px 12px; border-left:3px solid #965c83; background:rgba(130,83,117,.12); color:#c9bdc8; font-size:12px; line-height:1.65; }
+.contract-rule { display:flex; align-items:center; gap:10px; margin:18px 0; color:#c6a6c4; font:bold 10px Tahoma,sans-serif; letter-spacing:2px; }
+.contract-rule span { color:#9e6e9c; }
+.contract-form label { display:block; margin:13px 0 5px; color:#d5c4d5; font: bold 11px Tahoma,sans-serif; letter-spacing:.7px; }
+.contract-form label em { float:right; color:#a47c8b; font:italic 10px Georgia,serif; letter-spacing:0; }
+.contract-form input[type="text"],.contract-form input[type="password"] { display:block; width:100%; min-height:34px; padding:8px 10px; border:1px solid #746176; border-radius:0; background:#0d0d12; color:#f2eaf0; box-shadow:inset 0 1px 4px #000; font:12px Tahoma,sans-serif; }
+.contract-form input::placeholder { color:#6f6572; font-style:italic; }
+.contract-form input:focus { outline:1px solid #c69dc5; border-color:#c69dc5; }
+.contract-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.contract-grid label { min-height:25px; }
+.contract-grid input { min-width:0; }
+.field-note { display:block; margin-top:4px; color:#857889; font:italic 10px Georgia,serif; letter-spacing:0; }
+.contract-smallprint { margin:18px 0 10px; color:#918695; font-size:11px; line-height:1.65; }
+.contract-check { display:flex; align-items:flex-start; gap:8px; margin:12px 0 18px; color:#c7b8c8; font:11px Tahoma,sans-serif; line-height:1.5; }
+.contract-check input { margin-top:2px; accent-color:#8d5e8d; }
+.contract-check label { margin:0; font:11px Tahoma,sans-serif; letter-spacing:0; }
+.contract-submit { display:block; width:100%; padding:13px 10px; border:1px solid #bda1bd; border-bottom:3px solid #654c67; background:linear-gradient(#806382,#4c3b50); color:#fff4ff; cursor:pointer; font:bold 13px Georgia,serif; letter-spacing:2px; text-shadow:1px 1px #352437; box-shadow:0 0 14px rgba(147,99,150,.15); }
+.contract-submit:hover { background:linear-gradient(#a17ba2,#624765); }
+.pending-message { display:none; margin-top:20px; padding:20px 16px; border:1px dashed #bd9aaf; background:#171219; text-align:center; }
+.pending-message:target { display:block; }
+.pending-seal { display:inline-block; margin-bottom:8px; padding:10px; border:3px double #a15d70; color:#c67e90; font:bold 11px Tahoma,sans-serif; line-height:1.4; transform:rotate(-5deg); }
+.pending-message h2 { color:#f0e5ef; font-size:20px; font-weight:normal; }
+.pending-message p { color:#b8aab8; line-height:1.6; }
+.pending-code { font:10px Tahoma,sans-serif; letter-spacing:.6px; }
+.pending-code strong { color:#d9a3b0; }
+.pending-message a { color:#d9b5dc; }
+.contract-bottom { display:flex; justify-content:space-between; gap:10px; margin-top:20px; color:#766a7b; font:9px Tahoma,sans-serif; }
+.contract-footer { margin:17px 0 0; color:#756b79; text-align:center; font:10px Tahoma,sans-serif; }
+@media (max-width: 560px) { .contract-card { padding:25px 20px 17px; } .contract-card h1 { font-size:25px; } .contract-stamp { right:15px; top:18px; width:53px; height:53px; font-size:8px; } .contract-grid { grid-template-columns:1fr; gap:0; } .contract-topline { flex-direction:column; } .contract-bottom { flex-direction:column; } }
