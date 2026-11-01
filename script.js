@@ -14,7 +14,7 @@ setInterval(() => {
     }
 
     // Шанс, что буква останется или станет кубиком
-    if (Math.random() < 0.7) {
+    if (Math.random() < 0.8) {
       glitchedText += glitchChar;
     } else {
       glitchedText += originalText[i];
